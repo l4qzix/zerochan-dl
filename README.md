@@ -1,4 +1,4 @@
-```markdown
+
 # zerochan-dl
 
 [Zerochan](https://www.zerochan.net) 用の**非公式** Python クライアントライブラリです。

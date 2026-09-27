@@ -1,7 +1,7 @@
 
 # zerochan-dl
 
-[Zerochan](https://www.zerochan.net) 用の非公式ライブラリです
+[Zerochan](https://www.zerochan.net) 用の非公式ライブラリです　READMEとか一部はAIと共に作成
 
 ## 特徴
 

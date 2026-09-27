@@ -236,8 +236,7 @@ print("ログイン成功:", ok)
   含まれず、Zerochan 側のページデザイン変更の影響も受けやすい点に注意してください。
   `l`（1ページあたりの件数）パラメータが通常のブラウズ/検索ページでも実際に効くかは未確認です。
 - `get_category()` はページ内に `<script type="application/ld+json">` の構造化データが
-  存在する場合、そちらの `name` / `image` / `@type` を優先的に使います（非公式ライブラリ
-  [kiriharu/zerochan](https://github.com/kiriharu/zerochan) の手法を参考にした改良）。
+  存在する場合、そちらの `name` / `image` / `@type` を優先的に使います。
   構造化データが無い、または対象フィールドが欠けている場合のみ、従来どおり
   `og:description` の文面（例: "X is a character from Y."）から `type` を推測する
   フォールバックに切り替わります。フォールバック時は説明文の形式が異なるカテゴリで
@@ -245,9 +244,6 @@ print("ログイン成功:", ok)
   取得されます。
 - サイズ/次元フィルタ (`dimension`) は JSON API・通常ページの両方で共通の文字列値
   (`large` / `huge` / `landscape` / `portrait` / `square`) を使うことを実際のサイトで確認済みです。
-  `SizeFilter` / `SortBy` はこれらの分かりやすい別名で、非公式ライブラリ
-  [kiriharu/zerochan](https://github.com/kiriharu/zerochan)（Python, `PictureSize`/`SortBy` Enum）を
-  参考にしています。
 - Zerochan の API ドキュメントでは、匿名アクセスは Ban 対象になり得ると明記されています。
   `ZerochanClient(username=...)` で自分のユーザー名を指定することを推奨します。
 - レート制限は 60 req/min です。本ライブラリはデフォルトで 50 req/min に自主制限して
